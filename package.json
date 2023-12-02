@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "test": "vitest --coverage",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "generate": "npx plop --plopfile generators/plopfile.js",
+    "type-check:watch": "tsc -w --project tsconfig.json"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -40,6 +42,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "global-jsdom": "^9.1.0",
     "jsdom": "^22.1.0",
+    "plop": "^4.0.0",
     "storybook": "^7.6.3",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
