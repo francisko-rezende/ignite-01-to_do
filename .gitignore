@@ -25,3 +25,6 @@ dist-ssr
 
 # coverage report
 coverage
+
+# storybook default stories
+src/stories
