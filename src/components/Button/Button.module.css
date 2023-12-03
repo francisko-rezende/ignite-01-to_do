@@ -1,0 +1,25 @@
+.button {
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  padding: 1rem;
+  line-height: 1.4;
+  border: transparent;
+  cursor: pointer;
+  transition:
+    background-color 150ms,
+    opacity 100ms;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: var(--blue);
+}
+
+.button:active {
+  opacity: 0.8;
+}
