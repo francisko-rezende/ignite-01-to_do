@@ -21,6 +21,11 @@
   box-sizing: border-box;
 }
 
+:focus {
+  outline: 2px solid var(--purple-dark);
+  outline-offset: 1px;
+}
+
 * {
   font-family: "Inter", sans-serif;
   margin: 0;
