@@ -1,0 +1,27 @@
+.input {
+  background-color: var(--gray-500);
+  padding: 1rem;
+  color: var(--gray-100);
+  border-radius: 8px;
+  border: none;
+}
+
+.input::placeholder {
+  color: var(--gray-300);
+}
+
+.input:focus {
+  /* outline: none; */
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
