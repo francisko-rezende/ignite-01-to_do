@@ -1,18 +1,15 @@
 import styles from "./Checkbox.module.css";
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
-import { ReactNode } from "react";
+import { Root, Indicator } from "@radix-ui/react-checkbox";
 import { Check } from "lucide-react";
 
-type Checkbox = {
-  children: ReactNode;
-};
+type Checkbox = React.ComponentProps<typeof Root>;
 
-export const Checkbox = () => {
+export const Checkbox = (props: Checkbox) => {
   return (
-    <CheckboxPrimitive.Root className={styles.checkboxRoot} defaultChecked>
-      <CheckboxPrimitive.Indicator className={styles.checkboxIndicator}>
-        <Check size={14} />
-      </CheckboxPrimitive.Indicator>
-    </CheckboxPrimitive.Root>
+    <Root className={styles.checkboxRoot} {...props}>
+      <Indicator className={styles.checkboxIndicator}>
+        <Check size={12} />
+      </Indicator>
+    </Root>
   );
 };
