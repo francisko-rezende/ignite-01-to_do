@@ -1,0 +1,22 @@
+.statIndicator {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.createdTasks {
+  color: var(--blue);
+}
+
+.finishedTasks {
+  color: var(--purple);
+}
+
+.statistic {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--gray-200);
+  background-color: var(--gray-400);
+  padding-inline: 0.5rem;
+  padding-block: 0.125rem;
+  border-radius: 9999px;
+}
