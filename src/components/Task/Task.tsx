@@ -1,13 +1,9 @@
+import { type Task as TaskProps } from "../../types/Task";
 import { Checkbox } from "../Checkbox";
 import { IconButton } from "../IconButton";
 import styles from "./Task.module.css";
 
-type Task = {
-  isDone: boolean;
-  children: React.ReactNode;
-};
-
-export const Task = ({ children, isDone }: Task) => {
+export const Task = ({ children, isDone }: TaskProps) => {
   return (
     <li className={styles.task}>
       <Checkbox checked={isDone} />
