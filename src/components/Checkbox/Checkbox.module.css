@@ -20,15 +20,15 @@
   border-color: var(--purple-dark);
 }
 
-.checkboxRoot:hover {
+.checkboxRoot:is(:hover, :focus) {
   background-color: hsla(202, 68%, 37%, 0.2);
   border-color: var(--blue-dark);
 }
-.checkboxRoot:hover[data-state="checked"] {
+.checkboxRoot[data-state="checked"]:is(:hover, :focus) {
   background-color: var(--purple);
   border-color: var(--purple);
 }
 
 .checkboxIndicator {
-  color: white;
+  color: var(--gray-100);
 }
