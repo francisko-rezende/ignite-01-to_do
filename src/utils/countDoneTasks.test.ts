@@ -1,9 +1,9 @@
-import { Task } from "../types/Task";
+import { TaskData } from "../types/Task";
 import { countDoneTasks } from "./countDoneTasks";
 
 describe("countDoneTasks", () => {
   it("should return 0 when given an empty array of tasks", () => {
-    const tasks: Task[] = [];
+    const tasks: TaskData[] = [];
     const result = tasks.reduce(countDoneTasks, 0);
     expect(result).toBe(0);
   });

@@ -16,5 +16,5 @@ export const useAddTaskForm = ({ setTasks }: AddTaskForm) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setNewTask(e.target.value);
 
-  return { hasNewTask, handleCreateNewTask, handleInputChange };
+  return { hasNewTask, handleCreateNewTask, handleInputChange, newTask };
 };
