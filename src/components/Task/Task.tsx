@@ -3,14 +3,26 @@ import { Checkbox } from "../Checkbox";
 import { IconButton } from "../IconButton";
 import styles from "./Task.module.css";
 
-export const Task = ({ children, isDone }: TaskData) => {
+type Task = {
+  handleToggleDone: () => void;
+  handleDeleteTask: () => void;
+} & TaskData;
+
+export const Task = ({
+  children,
+  isDone,
+  handleDeleteTask,
+  handleToggleDone,
+}: Task) => {
   return (
     <li className={styles.task}>
-      <Checkbox checked={isDone} />
-      <p data-is-done={isDone} className={styles.taskDescription}>
+      <Checkbox onClick={handleToggleDone} checked={isDone} />
+      <span data-is-done={isDone} className={styles.taskDescription}>
         {children}
-      </p>
-      <IconButton />
+      </span>
+      <IconButton onClick={handleDeleteTask}>
+        {`delete the task "${children}"`}
+      </IconButton>
     </li>
   );
 };
