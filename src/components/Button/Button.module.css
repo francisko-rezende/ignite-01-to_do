@@ -23,3 +23,8 @@
 .button:active {
   opacity: 0.8;
 }
+
+.button:disabled {
+  background-color: var(--gray-300);
+  cursor: not-allowed;
+}
