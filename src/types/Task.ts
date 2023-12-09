@@ -1,4 +1,5 @@
-export type Task = {
+export type TaskData = {
   isDone: boolean;
-  children: React.ReactNode;
+  children: string;
+  id?: string;
 };

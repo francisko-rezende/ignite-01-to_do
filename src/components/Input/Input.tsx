@@ -4,11 +4,9 @@ type Input = { label: string } & React.ComponentProps<"input">;
 
 export const Input = ({ label, ...props }: Input) => {
   return (
-    <>
-      <label htmlFor="input" className={styles.srOnly}>
-        {label}
-      </label>
+    <label className={styles.label} htmlFor="input">
+      <span className={styles.srOnly}>{label}</span>
       <input id="input" className={styles.input} {...props} />
-    </>
+    </label>
   );
 };
