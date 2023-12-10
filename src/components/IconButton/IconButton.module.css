@@ -14,7 +14,7 @@
     opacity 100ms;
 }
 
-.iconButton:hover {
+.iconButton:is(:hover, :focus) {
   background-color: var(--gray-400);
   color: var(--danger);
 }
