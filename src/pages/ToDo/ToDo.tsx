@@ -10,7 +10,7 @@ import { useState } from "react";
 export const ToDo = () => {
   const [tasks, setTasks] = useState<TaskData[]>([]);
 
-  const handleToggleDone = (id: string) => {
+  const handleToggleDone = (id?: string) => {
     setTasks((tasks) => {
       return tasks.map((task) => {
         return task.id === id ? { ...task, isDone: !task.isDone } : task;
@@ -18,7 +18,7 @@ export const ToDo = () => {
     });
   };
 
-  const handleDeleteTask = (id: string) => {
+  const handleDeleteTask = (id?: string) => {
     setTasks((tasks) => {
       return tasks.filter((task) => task.id !== id);
     });
